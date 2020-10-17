@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>form</title>
+	<style>
+		h2 { text-align: center; }
+		div { width: 400px; margin: 10px auto; }
+		label{ width: 100%; display: inline-block; }
+		#send{ margin: 40px auto 0 auto; display: block; width: 50px; }
+	</style>
+</head>
+<body>
+	<h2>性別</h2>
+	<form id="comment" method="POST" action="/advertise">
+		<div>
+			男<input type="radio" name="sex" value="male"><br>
+			女<input type="radio" name="sex" value="female">
+		</div>
+		<input id="send" type="submit" value="送出">
+	</form>
+
+	<% if (show) { %>
+		<% for (var i = 0; i < data.length; i+=4) { %>
+			<a href="<%=data[i+1]%>"><img src="<%=data[i+2]%>" ></a>
+		<% } %>
+	<% } %>
+</body>
+</html>
